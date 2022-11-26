@@ -18,17 +18,17 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use(assignAuth)
-app.use(logger)
+// app.use(assignAuth)
+// app.use(logger)
 
-app.use('/auth', userRouter);
-app.use('/cart', cartRouter);
-app.use('/order', orderRouter);
-app.use('/products', productRouter)
-app.use('/address',addressRouter)
+// app.use('/auth', userRouter);
+// app.use('/cart', cartRouter);
+// app.use('/order', orderRouter);
+// app.use('/products', productRouter)
+// app.use('/address',addressRouter)
 
 
-app.use(errorHandler); // default errorHandler
+// app.use(errorHandler); // default errorHandler
 
 app.get('/', (req, res)=>{
   res.send("hello world")

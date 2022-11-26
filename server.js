@@ -9,6 +9,8 @@ import logger from "./middleware/logger.js";
 import { errorHandler } from "./middleware/errorhandler.js";
 import { assignAuth } from "./middleware/assignAuth.js";
 import addressRouter from './router/address.router.js'
+import dotenv from "dotenv";
+dotenv.config();
 
 const Port = process.env.PORT || 8080;
 

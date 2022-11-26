@@ -21,7 +21,6 @@ app.use(cors());
 app.use(assignAuth)
 app.use(logger)
 
-
 app.use('/auth', userRouter);
 app.use('/cart', cartRouter);
 app.use('/order', orderRouter);
@@ -31,10 +30,11 @@ app.use('/address',addressRouter)
 
 app.use(errorHandler); // default errorHandler
 
-
+app.get('/', (req, res)=>{
+  res.send("hello world")
+})
 
 app.listen(Port, () => {
   connection();
   console.log(`server is running at http://localhost:${Port}`);
 });
- 
